@@ -1,0 +1,8 @@
+python-dotenv #bulut servislere erişmek için
+openai #SDK
+streamlit #web uygulamamızı ayağa kaldırmak için 
+google-generativeai #SDK
+anthropic #SDK
+cohere #SDK
+
+
