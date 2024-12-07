@@ -1,0 +1,8 @@
+streamlit
+pyaudio
+wave
+openai
+google.generativeai
+python-dotenv
+
+# pip install -r module3/requirements.txt
