@@ -2,9 +2,8 @@ from openai import OpenAI
 import os 
 from dotenv import load_dotenv
 
-load_dotenv()
-
-my_key = os.getenv("openai_apikey") # get the api key from the .env file
+load_dotenv(dotenv_path="/Users/melisacevik/Desktop/Generative-AI-master/module2/text101/.env")
+my_key = os.getenv("OPENAI_API_KEY") # get the api key from the .env file
 
 client = OpenAI(api_key=my_key)
 

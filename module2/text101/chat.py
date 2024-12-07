@@ -4,8 +4,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-my_key = os.getenv("openai_apikey") # get the api key from the .env file
+my_key = os.getenv("OPENAI_API_KEY") # get the api key from the .env file
 
+# GPT 4-turbo
 client = OpenAI(api_key=my_key)
 
 import streamlit as st
@@ -30,7 +31,7 @@ if "messages" not in st.session_state:
 def generate_response(prompt):
     st.session_state.messages.append({"role": "user", "content": prompt})
 
-# böylelikle bu metodun çağrıldığı her yerde,  kendisine verilen prompt bizim sohbet geçmişimize bir kullanıcı mesajı olarak eklenmiş olacak
+#böylelikle bu metodun çağrıldığı her yerde,  kendisine verilen prompt bizim sohbet geçmişimize bir kullanıcı mesajı olarak eklenmiş olacak
 
     AI_Response = client.chat.completions.create(
         model = "gpt-4-1106-preview",
@@ -46,7 +47,7 @@ def generate_response(prompt):
 st.header("👾 Chat with Melisa 💜")
 st.divider()
 
-# [1:] yapmamızın sebebi, sohbet geçmişinin ilk elemanının sistem mesajı olması ve bu mesajın ekrana yazdırılmaması gerektiğinden
+# [1:] yapmamızın sebebi, sohbet geçmişinin ilk elemanının sistem mesajı olması ve bu mesajın ekrana yazdırılmaması gerektiğinden [1:]
 for message in st.session_state.messages[1:]:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
@@ -65,3 +66,5 @@ if prompt := st.chat_input("Mesajınızı Giriniz"):
         st.markdown(response)
 
     st.session_state.messages.append({"role": "assistant", "content": response}) # sohbet geçmişine eklenen mesajı asistan mesajı olarak ekle
+
+
