@@ -6,3 +6,5 @@ anthropic #SDK
 cohere #SDK
 
 
+# pip install -r requirements.txt
+# pip install -r module2/text101/requirements.txt

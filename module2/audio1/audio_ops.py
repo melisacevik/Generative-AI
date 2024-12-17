@@ -50,12 +50,11 @@ def transcribe_with_conformer(audio_file_name):
 
 # streamlit arayüzünü oluştur
 
-tab_TTS, tab_whisper, tab_translation, tab_conformer = st.tabs(
+tab_TTS, tab_whisper, tab_translation= st.tabs(
     [
         "TTS İle Ses Sentezleme",
         "Whisper ile Transkripsiyon",
-        "Whisper ile Tercüme",
-        "Conformer ile Transkripsiyon"
+        "Whisper ile Tercüme"
     ]
 )
 
@@ -133,28 +132,28 @@ with tab_translation:
 
 # 4. tab conformer modeli ile transkripsiyon
 
-with tab_conformer:
-    st.subheader("Conformer Modeli ile Transkripsiyon")
-    st.divider()
-
-    # Kullanıcıdan ses dosyası yüklemesi istenir
-    selected_file = st.file_uploader("Bir ses dosyası yükleyin", type=["mp3"], key="file_conformer")
-
-    if selected_file:
-        # Bellekteki dosyayı oku ve ses olarak Streamlit'te çal
-        audio_bytes = selected_file.read()
-        st.audio(data=audio_bytes, format="audio/mp3")
-
-        transcribe_btn = st.button("Metne Dönüştür", key="button_conformer")
-
-        if transcribe_btn:
-            # Geçici dosya oluştur ve AssemblyAI ile kullan
-            with open("temp_audio.mp3", "wb") as temp_file:
-                temp_file.write(selected_file.getbuffer())
-                # AssemblyAI'ye gönderirken dosya yolunu kullan
-                generated_text = transcribe_with_conformer(audio_file_name="temp_audio.mp3")
-
-            st.divider()
-            st.info(f"TRANSKRIPSİYON: {generated_text}")
-            st.balloons()
+# with tab_conformer:
+#     st.subheader("Conformer Modeli ile Transkripsiyon")
+#     st.divider()
+#
+#     # Kullanıcıdan ses dosyası yüklemesi istenir
+#     selected_file = st.file_uploader("Bir ses dosyası yükleyin", type=["mp3"], key="file_conformer")
+#
+#     if selected_file:
+#         # Bellekteki dosyayı oku ve ses olarak Streamlit'te çal
+#         audio_bytes = selected_file.read()
+#         st.audio(data=audio_bytes, format="audio/mp3")
+#
+#         transcribe_btn = st.button("Metne Dönüştür", key="button_conformer")
+#
+#         if transcribe_btn:
+#             # Geçici dosya oluştur ve AssemblyAI ile kullan
+#             with open("temp_audio.mp3", "wb") as temp_file:
+#                 temp_file.write(selected_file.getbuffer())
+#                 # AssemblyAI'ye gönderirken dosya yolunu kullan
+#                 generated_text = transcribe_with_conformer(audio_file_name="temp_audio.mp3")
+#
+#             st.divider()
+#             st.info(f"TRANSKRIPSİYON: {generated_text}")
+#             st.balloons()
 
