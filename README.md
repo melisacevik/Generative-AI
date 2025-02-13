@@ -70,3 +70,8 @@ For questions or suggestions, please contact [Melisa Cevik](https://github.com/m
 
 Thank you for exploring Generative AI - Module 2! We hope you find it useful and inspiring.
 
+
+# Generative AI - Module 4
+
+![Ekran Resmi 2025-02-13 10 34 02](https://github.com/user-attachments/assets/2f9591db-d250-47be-a96c-6a8648d66b91)
+
