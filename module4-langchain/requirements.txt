@@ -1,0 +1,16 @@
+langchain
+langchain-openai
+langchain-google-genai
+langchain_experimental
+openai
+anthropic
+cohere
+streamlit
+python-dotenv
+beautifulsoup4
+faiss-cpu
+pypdf
+unstructured
+networkx
+openpyxl
+rapidocr-onnxruntime
