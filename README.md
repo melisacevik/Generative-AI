@@ -46,8 +46,7 @@ Aşağıda, bu repoda bulunan temel bileşenlerin ve özelliklerin bir özeti bu
 
 VoiceDraw, kullanıcıların sesli komutlarla görseller oluşturmasını sağlayan bir uygulamadır. Uygulama, ses kaydını alıp metne çevirir ve ardından yapay zeka modelleriyle görsel üretir.
 
-![Ekran Resmi 2025-02-21 16.01.31.png](..%2FEkran%20Resmi%202025-02-21%2016.01.31.png)
-
+![Ekran Resmi 2025-02-21 16 01 31](https://github.com/user-attachments/assets/228cf806-c437-4aaf-83da-a4ceff70af55)
 
 ### 📌 Özellikler
 - **Ses Kaydı:** Kullanıcıdan sesli giriş alır.
@@ -90,9 +89,11 @@ streamlit run module4/model.py
 
 Bu çalışma, bellek genişletme teknikleri kullanarak modelin dış kaynaklardan bilgi almasını sağlar.
 
-![Ekran Resmi 2025-02-21 16.17.30.png](..%2FEkran%20Resmi%202025-02-21%2016.17.30.png)
+![Ekran Resmi 2025-02-21 16 17 30](https://github.com/user-attachments/assets/18a6c6f7-7e8d-428a-ab7a-a33745c39f20)
 
-![Ekran Resmi 2025-02-21 16.18.58.png](..%2FEkran%20Resmi%202025-02-21%2016.18.58.png)
+
+![Ekran Resmi 2025-02-21 16 18 58](https://github.com/user-attachments/assets/e1a5e2d6-900f-477d-b971-2e847563dbbd)
+
 
 
 #### 📌 Özellikler
