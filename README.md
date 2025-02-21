@@ -64,7 +64,7 @@ VoiceDraw, kullanıcıların sesli komutlarla görseller oluşturmasını sağla
 
 Bu çalışma, farklı yapay zeka dil modellerinin performanslarını karşılaştırmak için bir arayüz sunar.
 
-![Ekran Resmi 2025-02-13 10 34 02](https://github.com/user-attachments/assets/2f9591db-d250-47be-a96c-6a8648d66b91)
+![Ekran Resmi 2025-02-13 10.34.02.png](..%2FEkran%20Resmi%202025-02-13%2010.34.02.png)
 
 #### 📌 Özellikler
 - **Model Karşılaştırma:**
