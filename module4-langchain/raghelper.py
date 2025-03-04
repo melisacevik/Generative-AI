@@ -4,6 +4,8 @@ from langchain_community.document_loaders import WebBaseLoader
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import FAISS #facebookun servisi, Kullanacığımız metinleri vektör olarak
 # kullanmamızı sağlayacak
+from langchain_cohere import CohereEmbeddings
+from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter #metinleri belirli yerden böler
 import os
 from dotenv import load_dotenv
@@ -12,10 +14,16 @@ load_dotenv()
 
 my_key_openai = os.getenv("openai_apikey")
 my_key_google = os.getenv("google_apikey")
+my_key_hf = os.getenv("huggingface_access_token") #read tipinde oluşturduk
 
-llm_gemini = ChatGoogleGenerativeAI(google_api_key=my_key_google, model="gemini-pro")
+llm_gemini = ChatGoogleGenerativeAI(google_api_key=my_key_google, model="gemini-1.5-flash")
 
-embeddings = OpenAIEmbeddings(api_key=my_key_openai)
+#embeddings = OpenAIEmbeddings(api_key=my_key_openai)
+
+#embeddings = CohereEmbeddings(cohere_api_key=my_key_cohere, model="embed-multilingual-v3.0") #embed-englist-v3.0
+
+embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+
 
 # Gemini ile olan iletişimi sağlamak için ask_gemini()
 def ask_gemini(prompt):
@@ -102,4 +110,3 @@ def rag_with_pdf(file_path, prompt):
     AI_Response = llm_gemini.invoke(final_prompt)
 
     return AI_Response.content, relevant_documents
-
